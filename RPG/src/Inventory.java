@@ -16,8 +16,9 @@ public class Inventory {
 		count++;
 	}
 	
-	public void addItem(){
-		
+	public void addItem(Tool t){
+		items.add(t);
+		count++;
 	}
 	
 	
