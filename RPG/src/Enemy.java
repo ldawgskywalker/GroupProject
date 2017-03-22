@@ -1,4 +1,5 @@
-public class Player {
+
+public class Enemy {
 	private int hp;
 	private int armour;
 	private String name;
@@ -6,12 +7,11 @@ public class Player {
 	private boolean alive;
 
 	//CONSTRUCTOR
-	public Player(String n){
-		name = n;
+	public Enemy(int s){
 		pack = new Inventory();
-		hp = 100;
 		alive = true;
-		armour = 13;
+		
+		set(s);
 	}
 	//SETTERS AND GETTERS
 	
@@ -67,5 +67,23 @@ public class Player {
 		if(hp<=0)
 			alive = false;
 	}
-	
+	public void set(int q){
+		//GOBLINS
+		if(q==1){
+			hp=6;
+			armour=7;
+			pack.addItem(new Weapon("Rusty Short Sword",4));
+		}
+		//BANDITS
+		
+		//TROLLS
+		
+		//SKELETONS
+		
+		//PHANTOM
+		
+		//DRAGON
+		
+	}
+
 }

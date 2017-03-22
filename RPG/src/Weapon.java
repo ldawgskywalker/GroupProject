@@ -1,10 +1,10 @@
 public class Weapon {
 	private String name;
 	private int dmg;
-	private int hands;
 	
-	public Weapon(){
-		
+	public Weapon(String n, int d){
+		name=n;
+		dmg=d;
 	}
 	
 }
