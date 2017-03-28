@@ -4,17 +4,17 @@ public class Player {
 	private String name;
 	private Inventory pack;
 	private boolean alive;
-
+	
 	//CONSTRUCTOR
 	public Player(String n){
 		name = n;
 		pack = new Inventory();
-		hp = 100;
+		hp = 30;
 		alive = true;
 		armour = 13;
+		
 	}
 	//SETTERS AND GETTERS
-	
 	public int getHp() {
 		return hp;
 	}

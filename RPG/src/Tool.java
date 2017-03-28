@@ -1,7 +1,7 @@
 public class Tool {
 	private String name;
 	
-	public Tool(String n){
-		name=n;
-	}
+	public Tool(int t){
+		
+	}	
 }
