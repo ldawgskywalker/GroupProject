@@ -60,9 +60,6 @@ public class Enemy {
 	public void addWeapon(Weapon w){
 		pack.addItem(w);
 	}
-	public void addTool(Tool t){
-		pack.addItem(t);
-	}
 	public void dmg(int d){
 		hp = hp-d;
 		if(hp<=0)
@@ -76,14 +73,13 @@ public class Enemy {
 			hp=4;
 			armour=10;
 			pack.addItem(new Weapon("Rusty Short Sword",4));
-			pack.addItem(2);
+
 		}
 		//BANDITS
 		if(q==2){
 			hp=10;
 			armour=13;
 			pack.addItem(new Weapon("Dagger",6));
-			pack.addItem(7);
 		}
 		//TROLLS
 		if(q==3){

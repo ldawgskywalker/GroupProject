@@ -1,21 +1,20 @@
 import java.util.*;
 public class Inventory {
-	private LinkedList items;
+	private LinkedList<Weapon> items;
 	private int count;
 	
 	
 	//CONSTRUCTOR
 	public Inventory(){
-		items = new LinkedList();
-		count = 0;
-		items.add(50);		
+		items = new LinkedList<Weapon>();
+		count = 0;	
 	}
 	//SETTERS AND GETTERS
-	public LinkedList getItems() {
+	public LinkedList<Weapon> getItems() {
 		return items;
 	}
 
-	public void setItems(LinkedList items) {
+	public void setItems(LinkedList<Weapon> items) {
 		this.items = items;
 	}
 
@@ -34,19 +33,7 @@ public class Inventory {
 		items.add(w);
 		count++;
 	}
-	//ADD TOOL TO ITEMS
-	public void addItem(Tool t){
-		items.add(t);
-		count++;
-	}
-	//ADD MONEY TO ITEMS
-	public void addItem(int g){
-		int temp;
-		temp = g+(int)items.getFirst();
-		//add to front
-		items.offerFirst(temp);
-		count++;
-	}
+
 	
 	
 	

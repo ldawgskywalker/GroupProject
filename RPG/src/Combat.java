@@ -1,6 +1,7 @@
 
 public class Combat {
 	private static int r; 
+
 	
 	public static void fight(Player p, int d){
 		if(roll(20)>p.getArmour()){
@@ -20,11 +21,11 @@ public class Combat {
 			//IF HITS, ROLLS FOR DMG
 			int dmg = roll(d);
 			e.dmg(dmg);
-			System.out.println("Enemy HIT! Deals "+dmg+" damage.You have "+e.getHp()+"HP left.");	
+			System.out.println("You HIT! Deals "+dmg+" damage.Enemy has "+e.getHp()+"HP left.");	
 		}
 		//IF NO HIT, MISS
 		else{
-			System.out.println("Enemy MISS!");
+			System.out.println("You MISS!");
 		}
 		
 	}

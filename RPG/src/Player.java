@@ -12,7 +12,7 @@ public class Player {
 		hp = 30;
 		alive = true;
 		armour = 13;
-		
+		pack.addItem(new Weapon("Fist",4));
 	}
 	//SETTERS AND GETTERS
 	public int getHp() {
@@ -24,7 +24,7 @@ public class Player {
 	}
 
 	public void setArmour(int armour) {
-		this.armour = armour;
+		this.armour += armour;
 	}
 
 	public boolean isAlive() {
@@ -59,9 +59,7 @@ public class Player {
 	public void addWeapon(Weapon w){
 		pack.addItem(w);
 	}
-	public void addTool(Tool t){
-		pack.addItem(t);
-	}
+
 	public void dmg(int d){
 		hp = hp-d;
 		if(hp<=0)
