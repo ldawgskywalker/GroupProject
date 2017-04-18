@@ -1,0 +1,301 @@
+mp_default
+North
+South
+East
+West
+$/NPC/Enemy
+Description
+Look1
+Look2
+
+mp_woods
+Bridge
+Cliff
+DNE
+Cave
+$
+You awaken in the middle of the woods, dazed and confused. 
+You see trees... You're in the woods... There usually isn't much but trees.
+Oh my god... It's a dragon... Oh, wait... No... It's just trees.
+
+mp_cave
+DNE
+DNE
+Woods
+DNE
+npc
+Neil Young
+You enter a dimly lit cave. In the center is an old man by a fire.
+You look around and see rocks. Its a cave, what did you expect?
+Oh my god... Another dragon... Nope, just another rock.
+
+mp_bridge
+Road
+Woods
+River
+DNE
+enemy
+3
+You aproach the bridge to find a troll!
+You look around and see the bridge. It appears to be made of wood.
+You gotta be kidding me... Another dragon... Never mind, its just my shadow.
+
+mp_road
+Outskirts
+Bridge
+DNE
+DNE
+$
+You approach a road that leads to a town.
+You are on a road, not much is happening here.
+Ok, for real this time… A dragon… Made you look.
+
+
+mp_river
+null
+
+null
+
+Shack
+
+Bridge
+
+$
+
+You approach a river which flows to the east.
+
+You look around and find water! You are in a river what did you expect.
+
+Water dragon, its a water dragon!
+
+
+mp_shack
+
+null
+
+null
+
+Lake
+
+River
+
+$
+
+You find an old abandoned fishing shack on the edge of the river.
+
+Hmmm… This seems like a nice place to settle down.
+
+Wait a DRAGON! Ha ha, got you again… sucker!
+
+
+mp_outskirts
+
+Destroyed Village
+
+Road
+
+Road2
+
+null
+
+Bandit
+
+(description for thing)
+
+(Look around thing)
+
+(^^)
+
+
+mp_lake
+
+Road2
+
+null
+
+LakeTown
+
+Shack
+
+$
+
+You drive where the river meets its end, the lake.
+
+(Look around thing)
+
+(^^)
+
+
+mp_fckdvillage
+
+null
+
+Outskirts
+
+null
+
+null
+
+$
+
+You arrive to find the town burnt to nothing
+
+(Look around thing)
+
+(^^)
+
+
+mp_road2
+
+Intersection
+
+Lake
+
+null
+
+Outskirts
+
+$
+
+(description)
+
+(Look around thing)
+
+(^^)
+
+
+mp_laketown
+
+null
+
+Pub
+
+Store
+
+Lake
+
+$
+
+(Description)
+
+(Look around thing)
+
+(^^)
+
+
+mp_intersection
+
+Dragon
+
+Road2
+
+Crypt
+
+DwarfMine
+
+$
+
+(description)
+
+(Look around thing)
+
+(^^)
+
+
+mp_pub
+
+LakeTown
+
+null
+
+null
+
+null
+
+$
+
+(description)
+
+(Look around thing)
+
+(^^)
+
+
+mp_market
+
+null
+
+null
+
+null
+
+LakeTown
+
+$
+
+(description)
+
+(Look around thing)
+
+(^^)
+
+
+mp_mine
+
+null
+
+null
+
+Intersection
+
+null
+
+$
+
+(description)
+
+(Look around thing)
+
+(^^)
+
+
+mp_crypt
+
+null
+
+null
+
+null
+
+Intersection
+
+Phantom
+
+(description)
+
+(Look around thing)
+
+(^^)
+
+
+mp_dragon
+
+null
+
+Intersection
+
+null
+
+null
+
+Dragon
+
+(description)
+
+(Look around thing)
+
+(^^)
+
+
+
+
