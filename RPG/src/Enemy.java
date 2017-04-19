@@ -87,12 +87,6 @@ public class Enemy {
 			armour = 11;
 			pack.addItem(new Weapon("Club", 6));
 		}
-		//SKELETONS
-		if(q==4){
-			hp=5;
-			armour = 9;
-			pack.addItem(new Weapon("Sword",6));
-		}
 		//PHANTOM
 		if(q==5){
 			hp=12;
