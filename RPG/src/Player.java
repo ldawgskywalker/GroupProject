@@ -4,6 +4,7 @@ public class Player {
 	private String name;
 	private Inventory pack;
 	private boolean alive;
+	private int gold;
 	
 	//CONSTRUCTOR
 	public Player(String n){
@@ -13,6 +14,7 @@ public class Player {
 		alive = true;
 		armour = 13;
 		pack.addItem(new Weapon("Fist",4));
+		gold=50;
 	}
 	//SETTERS AND GETTERS
 	public int getHp() {

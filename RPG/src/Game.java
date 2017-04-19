@@ -21,12 +21,14 @@ public class Game {
 		
 		System.out.println("Welcome to the game, "+p.getName()+"!");
 		
-		while(!s.equals("exit")){
-			System.out.println(w.getDes());
-			System.out.println("What would you like to do?");
-				s = kb.nextLine().toLowerCase();
-			event(s);
-				
+		for(int i=0;i<w.getRooms().size();i++){
+			System.out.println("\n"+w.getRooms().get(i).getNorth()+
+								"\n"+w.getRooms().get(i).getSouth()+
+								"\n"+w.getRooms().get(i).getEast()+
+								"\n"+w.getRooms().get(i).getWest()+
+								"\n"+w.getRooms().get(i).getName()+
+								"\n"+w.getRooms().get(i).getNPC().getName()+
+								"\n"+w.getRooms().get(i).getEnemy().getName());
 		}
 		
 		
@@ -52,24 +54,26 @@ public class Game {
 		kb.close();
 	}
 	public static void event(String s) throws FileNotFoundException{
-		if(s.equals("look around")){
+		/*if(s.equals("look around")){
 			if(count==0){
-				w.getLook1();
+				System.out.print(w.getLook1());
 				count++;
 			}
-			if(count==1)
-				w.getLook2();
-		}
+			else 
+				System.out.print(w.getLook2());		
+			}
 		if(s.equals("south")){
 			if(w.getSouth().equals("DNE")){
 				System.out.println("Unfortunately, you cannot go South.");
 			}
 			else{
 				w.goSouth();
+				count=0;
 				if(!w.getN().equals(null))
 					n=w.getN();
 				if(!w.getE().equals(null))
 					e=w.getE();
+				
 			}
 		}
 		if(s.equals("north")){
@@ -78,6 +82,7 @@ public class Game {
 			}
 			else{
 				w.goNorth();
+				count=0;
 				if(!w.getN().equals(null))
 					n=w.getN();
 				if(!w.getE().equals(null))
@@ -91,6 +96,7 @@ public class Game {
 			}
 			else{
 				w.goEast();
+				count=0;
 				if(!w.getN().equals(null))
 					n=w.getN();
 				if(!w.getE().equals(null))
@@ -99,17 +105,18 @@ public class Game {
 			
 		}
 		if(s.equals("west")){
-			if(w.getEast().equals("DNE")){
+			if(w.getWest().equals("DNE")){
 				System.out.println("Unfortunately, you cannot go West.");
 			}
 			else{
 				w.goWest();
+				count=0;
 				if(!w.getN().equals(null))
 					n=w.getN();
 				if(!w.getE().equals(null))
 					e=w.getE();
 			}
 			
-		}
+		}*/
 	}
 }
