@@ -1,7 +1,6 @@
 
 public class Combat {
 	private static int r; 
-
 	
 	public static void fight(Player p, int d){
 		if(roll(20)>p.getArmour()){
