@@ -9,10 +9,10 @@ Look1
 Look2
 
 mp_woods
-Bridge
-Cliff
+bridge
+cliff
 DNE
-Cave
+cave
 $
 You awaken in the middle of the woods, dazed and confused. 
 You see trees... You're in the woods... There usually isn't much but trees.
@@ -21,7 +21,7 @@ Oh my god... It's a dragon... Oh, wait... No... It's just trees.
 mp_cave
 DNE
 DNE
-Woods
+woods
 DNE
 npc
 Neil Young
@@ -30,9 +30,9 @@ You look around and see rocks. Its a cave, what did you expect?
 Oh my god... Another dragon... Nope, just another rock.
 
 mp_bridge
-Road
-Woods
-River
+road
+woods
+river
 DNE
 enemy
 3
@@ -41,8 +41,8 @@ You look around and see the bridge. It appears to be made of wood.
 You gotta be kidding me... Another dragon... Never mind, its just my shadow.
 
 mp_road
-Outskirts
-Bridge
+outskirts
+bridge
 DNE
 DNE
 $
@@ -52,70 +52,42 @@ Ok, for real this time… A dragon… Made you look.
 
 
 mp_river
-null
-
-null
-
+DNE
+DNE
 Shack
-
 Bridge
-
 $
-
 You approach a river which flows to the east.
-
 You look around and find water! You are in a river what did you expect.
-
 Water dragon, its a water dragon!
 
 
 mp_shack
-
-null
-
-null
-
-Lake
-
-River
-
+DNE
+DNE
+lake
+river
 $
-
 You find an old abandoned fishing shack on the edge of the river.
-
 Hmmm… This seems like a nice place to settle down.
-
 Wait a DRAGON! Ha ha, got you again… sucker!
 
-
 mp_outskirts
-
 Destroyed Village
-
-Road
-
-Road2
-
-null
-
-Bandit
-
+road
+road2
+DNE
+bandit
 (description for thing)
-
 (Look around thing)
-
 (^^)
 
 
 mp_lake
-
-Road2
-
-null
-
-LakeTown
-
-Shack
+road2
+DNE
+laketown
+shack
 
 $
 
@@ -127,175 +99,93 @@ You drive where the river meets its end, the lake.
 
 
 mp_fckdvillage
-
-null
-
-Outskirts
-
-null
-
-null
-
+DNE
+outskirts
+DNE
+DNE
 $
-
 You arrive to find the town burnt to nothing
-
 (Look around thing)
-
 (^^)
-
 
 mp_road2
-
-Intersection
-
-Lake
-
-null
-
-Outskirts
-
+intersection
+lake
+DNE
+outskirts
 $
-
 (description)
-
 (Look around thing)
-
 (^^)
-
 
 mp_laketown
-
-null
-
-Pub
-
-Store
-
-Lake
-
+DNE
+pub
+store
+lake
 $
-
 (Description)
-
 (Look around thing)
-
 (^^)
-
 
 mp_intersection
-
-Dragon
-
-Road2
-
-Crypt
-
-DwarfMine
-
+dragon
+road2
+crypt
+dwarfmine
 $
-
 (description)
-
 (Look around thing)
-
 (^^)
-
 
 mp_pub
-
-LakeTown
-
-null
-
-null
-
-null
-
+laketown
+DNE
+DNE
+DNE
 $
-
 (description)
-
 (Look around thing)
-
 (^^)
-
 
 mp_market
-
-null
-
-null
-
-null
-
-LakeTown
-
+DNE
+DNE
+DNE
+laketown
 $
-
 (description)
-
 (Look around thing)
-
 (^^)
-
 
 mp_mine
-
-null
-
-null
-
-Intersection
-
-null
-
+DNE
+DNE
+intersection
+DNE
 $
-
 (description)
-
 (Look around thing)
-
 (^^)
-
 
 mp_crypt
-
-null
-
-null
-
-null
-
-Intersection
-
-Phantom
-
+DNE
+DNE
+DNE
+intersection
+enemy
+phantom
 (description)
-
 (Look around thing)
-
 (^^)
-
 
 mp_dragon
-
-null
-
-Intersection
-
-null
-
-null
-
-Dragon
-
+DNE
+intersection
+DNE
+DNE
+enemy
+dragon
 (description)
-
 (Look around thing)
-
 (^^)
-
-
-
-
