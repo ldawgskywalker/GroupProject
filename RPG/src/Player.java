@@ -24,6 +24,12 @@ public class Player {
 		return armour;
 	}
 
+	public int getGold() {
+		return gold;
+	}
+	public void setGold(int gold) {
+		this.gold = gold;
+	}
 	public void setArmour(int armour) {
 		this.armour += armour;
 	}

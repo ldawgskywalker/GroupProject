@@ -43,12 +43,14 @@ public class Game {
 			event(s);
 			if(w.getE()!=null){
 				System.out.print("Battle ensues!");
+				//displays pack item, so user chooses item to use in battle
 				for(int i=0;i<p.getPack().getItems().size();i++){
 					System.out.println(i+1+"."+p.getPack().getItems().get(i).getName()+"\t Deals "+p.getPack().getItems().get(i).getDmg()+" damage.");
 				}
 				event(w.getE(),kb.nextInt()-1);
 				if(w.getE().getHp()<=0){
 					System.out.println(w.getE().getName()+" is dead!");
+					
 					w.setE(null);
 				}
 			}
