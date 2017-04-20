@@ -6,13 +6,14 @@ public class Enemy {
 	private String name;
 	private Inventory pack;
 	private boolean alive;
-
+	private boolean dragon;
 	
 
 	//CONSTRUCTOR
 	public Enemy(int s){
 		pack = new Inventory();
 		alive = true;
+		dragon=false;
 		
 		set(s);
 	}
@@ -57,15 +58,40 @@ public class Enemy {
 	public void setPack(Inventory pack) {
 		this.pack = pack;
 	}
+	public int getNum() {
+		return num;
+	}
+
+	public void setNum(int num) {
+		this.num = num;
+	}
+
+	public boolean isDragon() {
+		return dragon;
+	}
+
+	public void setDragon(boolean dragon) {
+		this.dragon = dragon;
+	}
 	//END OF SETTERS AND GETTERS
+
+	
 
 	public void addWeapon(Weapon w){
 		pack.addItem(w);
 	}
 	public void dmg(int d){
 		hp = hp-d;
-		if(hp<=0)
+		if(hp<=0){
 			alive = false;
+			if(num==6){
+				System.out.println("You have defeated the dragon, and won the game. Congratulations!!");
+				System.exit(0);
+			}
+			setName(null);
+			
+				
+		}
 	}
 
 	public void set(int q){
@@ -107,6 +133,7 @@ public class Enemy {
 			armour=14;
 			pack.addItem(new Weapon("Claw",4,false));
 			pack.addItem(new Weapon("Fire",6,false));
+			dragon=true;
 		}
 	}
 	

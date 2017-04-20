@@ -2,7 +2,7 @@ Dragon
 Road2
 Crypt
 DwarfMine
-You come to the fork in the road.
+You come to the fork in the road. There is a goblin standing in your way. 
 Hmm... One of these things is not like the other...
 If crossroad demons are a thing, maybe crossroad dragons are a thing?
 $

@@ -3,7 +3,7 @@ null
 Woods
 null
 You enter a dimly lit cave. In the center is an old man by a fire.
-You see the old man holding a sword. He says," It is dangerous to go alone, take this." (type take to obtain)
+The Old Man is holding a sword. He says, "It's dangerous to go alone. Take this." (Type "take" to obtain).
 Oh my god... Another dragon... Nope, just another rock.
 npc
 Neil Young

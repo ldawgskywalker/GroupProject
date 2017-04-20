@@ -4,6 +4,7 @@ import java.util.*;
 import java.util.concurrent.TimeUnit;
 public class Game {
 	private static Player p;
+	private static String name;
 	private static World w;
 	private static int count=0;
 	public static void main(String[]args) throws IOException, InterruptedException{
@@ -31,16 +32,18 @@ public class Game {
 				+ "\n7. Weapons 	-- Displays the weapons in your inventory"
 				+ "\n8. Sleep 	-- Let's your character heal"
 				+ "\n9. HP 	  	-- Displays hp of your character"
-				+ "\n10. HELP  	-- Displays this list again");
+				+ "\n10. HELP  	-- Displays this list again"
+				+ "\n11. EXIT 	-- leaves game");
 		System.out.println("Press enter to continue...");
 			kb.nextLine();
 			
 		System.out.println("You wake up dazed and confused in the forest.");
 		//main game
-		while(!s.equals("exit")){
+		while(!s.equals("exit")&&p.isAlive()==true){
 			System.out.println("What would you like to do?");
 				s = kb.nextLine().toLowerCase();
 			event(s);
+			
 			if(w.getE()!=null){
 				System.out.print("Battle ensues!");
 				//displays pack item, so user chooses item to use in battle
@@ -49,10 +52,12 @@ public class Game {
 				}
 				event(w.getE(),kb.nextInt()-1);
 				if(w.getE().getHp()<=0){
-					System.out.println(w.getE().getName()+" is dead!");
 					
-					w.setE(null);
+					System.out.println("You have defeated the enemy!");
+										
+					
 				}
+				w.setE(null);
 			}
 			
 		}
@@ -76,7 +81,7 @@ public class Game {
 			else{
 				w.goSouth();
 				System.out.print(w.getDes());
-				
+				count=0;
 			}
 		}
 		else if(s.equals("north")){
@@ -86,6 +91,7 @@ public class Game {
 			else{
 				w.goNorth();
 				System.out.print(w.getDes());
+				count=0;
 			}
 			
 		}
@@ -93,10 +99,15 @@ public class Game {
 			if(w.getEast().equals("null")){
 				System.out.println("Unfortunately, you cannot go East.");
 			}
+			if(w.getEast().equals("Store")){
+				System.out.println("STORE");
+				Store store = new Store(p);
+				store.activateStore();
+			}
 			else{
 				w.goEast();
 				System.out.print(w.getDes());
-
+				count=0;
 			}
 			
 		}
@@ -107,36 +118,31 @@ public class Game {
 			else{
 				w.goWest();
 				System.out.print(w.getDes());
+				count=0;
 			}
 			
 		}
-		else if(s.equals("talk")){
-			if(w.getN()==null){
-				System.out.println("There is a time and place for everything... But not now.");
-			}
-			else
-				System.out.println(w.getN().getSays());
-		}
+		
 		else if(s.equals("take")){
 			if(w.getN()==null&&w.getE()==null){
 				System.out.println("There's nothing to take...");
 			}
 			//takes first item in NPC inventory
-			if(w.getN()!=null){
+			if(w.getN()!=null && w.getN().getPack()!=null){
 				if(w.getN().getPack().getItems().get(0).isObtainable()){
 					System.out.println("You successfully added "+w.getN().getPack().getItems().get(0).getName()+" to your inventory");
 					p.addWeapon(w.getN().getPack().getItems().remove(0));
 				}
 			}
-			if(w.getE()!=null){
+			if(w.getE()!=null&&w.getE().getPack()!=null){
 				if(w.getE().getPack().getItems().get(0).isObtainable()){
 					p.addWeapon(w.getE().getPack().getItems().remove(0));
 				}
 			}
 		}
 		else if(s.equals("weapons")){
-			for(int i=1;i<p.getPack().getItems().size();i++){
-				System.out.println(i+"."+p.getPack().getItems().get(i).getName()+"\t Deals "+p.getPack().getItems().get(i).getDmg()+" damage.");
+			for(int i=0;i<p.getPack().getItems().size();i++){
+				System.out.println(i+1+"."+p.getPack().getItems().get(i).getName()+"\t Deals "+p.getPack().getItems().get(i).getDmg()+" damage.");
 			}
 		}
 		else if(s.equals("hp")){
@@ -160,6 +166,7 @@ public class Game {
 					+ "\n8. HP 	  	-- Displays hp of your character"
 					+ "\n9. HELP  	-- Displays this list again");
 		}
+		
 	}
 	public static void event(Enemy e, int i){
 		Scanner kb=new Scanner(System.in);

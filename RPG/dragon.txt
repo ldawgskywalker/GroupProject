@@ -2,9 +2,9 @@ null
 Intersection
 null
 null
-You walk into the lair. There is a presense, but it's far too dark to see anything right now.
-Taking a few steps forward, something moves behind you!
-That's a dragon.
+You walk into the lair. There is a presense, but it's far too dark to see anything right now.Taking a few steps forward, something moves behind you! That's a dragon.
+null
+null
 $
 enemy
 6
