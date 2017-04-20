@@ -2,7 +2,7 @@
 public class NPC {
 	private int hp;
 	private int armour;
-	private String name;
+	private String name, says;
 	private Inventory pack;
 	private boolean alive;
 	
@@ -13,7 +13,6 @@ public class NPC {
 		hp = 30;
 		alive = true;
 		armour = 13;
-		pack.addItem(new Weapon("Fist",4));
 	}
 	//SETTERS AND GETTERS
 	public int getHp() {
@@ -42,6 +41,12 @@ public class NPC {
 
 	public String getName() {
 		return name;
+	}
+	public String getSays() {
+		return says;
+	}
+	public void setSays(String s){
+		this.says=s;
 	}
 
 	public void setName(String name) {

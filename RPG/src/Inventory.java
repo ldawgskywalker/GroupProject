@@ -1,20 +1,20 @@
 import java.util.*;
 public class Inventory {
-	private LinkedList<Weapon> items;
+	private ArrayList<Weapon> items;
 	private int count;
 	
 	
 	//CONSTRUCTOR
 	public Inventory(){
-		items = new LinkedList<Weapon>();
+		items = new ArrayList<Weapon>();
 		count = 0;	
 	}
 	//SETTERS AND GETTERS
-	public LinkedList<Weapon> getItems() {
+	public ArrayList<Weapon> getItems() {
 		return items;
 	}
 
-	public void setItems(LinkedList<Weapon> items) {
+	public void setItems(ArrayList<Weapon> items) {
 		this.items = items;
 	}
 

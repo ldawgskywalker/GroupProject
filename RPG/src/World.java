@@ -6,34 +6,23 @@ public class World {
 	private int count;
 	private Enemy e;
 	private NPC n;
+	private Scanner in;
 	
 	//CONSTRUCTOR
 	public World()throws IOException{
-		Scanner in = new Scanner(new FileReader("maps.txt"));
-		 
-		while(!in.nextLine().equals("mp_woods")){
-			in.nextLine();
-		}
+		in = new Scanner(new FileReader("woods.txt"));
+		
 		north=in.nextLine();
 		south=in.nextLine();
 		east=in.nextLine();
 		west=in.nextLine();
-		if(!in.nextLine().equals("$")){
-			if(in.nextLine().equals("npc"))
-				n = new NPC(in.nextLine());
-			else
-				e = new Enemy(in.nextInt());
-		}
-		else{
-			n = null;
-			e=null;
-		}
 		des=in.nextLine();
 		look1=in.nextLine();
 		look2=in.nextLine();
-		
-		
-		
+		if(in.nextLine().equals("npc"))
+			n = new NPC(in.nextLine());
+		else if(in.nextLine().equals("enemy"))
+			e = new Enemy(in.nextInt());
 		in.close();
 	}
 
@@ -126,113 +115,79 @@ public class World {
 	}
 	
 	public void goNorth() throws FileNotFoundException{
-		Scanner in = new Scanner(new FileReader("maps.txt"));
-		 
-		while(!in.nextLine().equals("mp_"+north)){
-			in.nextLine();
-		}
+		in = new Scanner(new FileReader(north.toLowerCase()+".txt"));
+		
 		north=in.nextLine();
 		south=in.nextLine();
 		east=in.nextLine();
 		west=in.nextLine();
-		if(!in.nextLine().equals("$")){
-			if(in.nextLine().equals("npc"))
-				n = new NPC(in.nextLine());
-			else
-				e = new Enemy(in.nextInt());
-		}
-		else{
-			n = null;
-			e=null;
-		}
 		des=in.nextLine();
 		look1=in.nextLine();
 		look2=in.nextLine();
+		if(in.nextLine().equals("npc"))
+			n = new NPC(in.nextLine());
+		else if(in.nextLine().equals("enemy"))
+			e = new Enemy(in.nextInt());
 		
-		System.out.println(north+"\n"+south+"\n"+east+"\n"+west+"\n"+des+"\n"+look1+"\n"+look2);
 		
 		in.close();
 	}
 	
 	public void goSouth() throws FileNotFoundException{
-		Scanner in = new Scanner(new FileReader("maps.txt"));
+		in = new Scanner(new FileReader(south.toLowerCase()+".txt"));
 		 
-		while(!in.nextLine().equals("mp_"+south)){
-			in.nextLine();
-		}
 		north=in.nextLine();
 		south=in.nextLine();
 		east=in.nextLine();
 		west=in.nextLine();
-		if(!in.nextLine().equals("$")){
-			if(in.nextLine().equals("npc"))
-				n = new NPC(in.nextLine());
-			else
-				e = new Enemy(in.nextInt());
-		}
-		else{
-			n = null;
-			e=null;
-		}
 		des=in.nextLine();
 		look1=in.nextLine();
 		look2=in.nextLine();
+		if(in.nextLine().equals("npc"))
+			n = new NPC(in.nextLine());
+		else if(in.nextLine().equals("enemy"))
+			e = new Enemy(in.nextInt());
 		
-		System.out.println(north+"\n"+south+"\n"+east+"\n"+west+"\n"+des+"\n"+look1+"\n"+look2);
 		
 		in.close();
 	}
 	
 	public void goEast() throws FileNotFoundException{
-		Scanner in = new Scanner(new FileReader("maps.txt"));
+		in = new Scanner(new FileReader(east.toLowerCase()+".txt"));
 		 
-		while(!in.nextLine().equals("mp_"+east)){
-			in.nextLine();
-		}
 		north=in.nextLine();
 		south=in.nextLine();
 		east=in.nextLine();
 		west=in.nextLine();
-		if(!in.nextLine().equals("$")){
-			if(in.nextLine().equals("npc"))
-				n = new NPC(in.nextLine());
-			else
-				e = new Enemy(in.nextInt());
-		}
-		else{
-			n = null;
-			e=null;
-		}
 		des=in.nextLine();
 		look1=in.nextLine();
 		look2=in.nextLine();
-		
-		System.out.println(north+"\n"+south+"\n"+east+"\n"+west+"\n"+des+"\n"+look1+"\n"+look2);
+		if(in.nextLine().equals("npc"))
+			n = new NPC(in.nextLine());
+		else if(in.nextLine().equals("enemy"))
+			e = new Enemy(in.nextInt());
 		
 		in.close();
 	}
 	
 	public void goWest() throws FileNotFoundException{
-		Scanner in = new Scanner(new FileReader("maps.txt"));
+		in = new Scanner(new FileReader(west.toLowerCase()+".txt"));
 		 
-		while(!in.nextLine().equals("mp_"+west)){
-			in.nextLine();
-		}
 		north=in.nextLine();
 		south=in.nextLine();
 		east=in.nextLine();
 		west=in.nextLine();
-		if(!in.nextLine().equals("$")){
-			if(in.nextLine().equals("npc"))
-				n = new NPC(in.nextLine());
-			else
-				e = new Enemy(in.nextInt());
-		}
 		des=in.nextLine();
 		look1=in.nextLine();
 		look2=in.nextLine();
-		
-		System.out.println(north+"\n"+south+"\n"+east+"\n"+west+"\n"+des+"\n"+look1+"\n"+look2);
+		if(in.nextLine().equals("npc")){
+			n = new NPC(in.nextLine());
+			n.addWeapon(new Weapon(in.nextLine(),in.nextInt()));
+			n.setSays(in.nextLine());
+		}
+		else if(in.nextLine().equals("enemy"))
+			e = new Enemy(in.nextInt());
+
 		
 		in.close();
 	}
