@@ -2,6 +2,7 @@
 public class Enemy {
 	private int hp;
 	private int armour;
+	private int num;
 	private String name;
 	private Inventory pack;
 	private boolean alive;
@@ -12,6 +13,7 @@ public class Enemy {
 	public Enemy(int s){
 		pack = new Inventory();
 		alive = true;
+		
 		set(s);
 	}
 	//SETTERS AND GETTERS

@@ -6,4 +6,5 @@ You come to the fork in the road.
 Hmm... One of these things is not like the other...
 If crossroad demons are a thing, maybe crossroad dragons are a thing?
 $
-$
+enemy
+1

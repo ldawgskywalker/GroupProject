@@ -13,7 +13,6 @@ public class Player {
 		hp = 30;
 		alive = true;
 		armour = 13;
-		pack.addItem(new Weapon("Fist",4));
 		gold=50;
 	}
 	//SETTERS AND GETTERS

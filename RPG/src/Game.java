@@ -13,24 +13,38 @@ public class Game {
 		
 		System.out.print("Input character's name: ");
 			p = new Player(kb.nextLine());
-		
+			p.addWeapon(new Weapon("Fist", 4));
 		String s="";
 		
 		w	= new World();
 		
 		System.out.println("Welcome to the game, "+p.getName()+"!");
 		System.out.println();
-		System.out.println("//RULES AND SUCH");
-		System.out.print(w.getDes());
-		while(!s.equals("exit")){
+		System.out.println("The rules are simple. You will be dropped into our game, and you must type commands to work your way through."
+				+ "\nThe commands are: "
+				+ "\n1. North 	-- to go North"
+				+ "\n2. South 	-- to go South"
+				+ "\n3. East 	-- to go East"
+				+ "\n4. West 	-- to go West"
+				+ "\n5. Look Around		-- will give you more information about your surroundings"
+				+ "\n6. Take 	-- Takes item from NPC or Enemy"
+				+ "\n7. Weapons 	-- Displays the weapons in your inventory"
+				+ "\n8. Sleep 	-- Let's your character heal"
+				+ "\n9. HP 	  	-- Displays hp of your character"
+				+ "\n10. HELP  	-- Displays this list again");
+		System.out.println("Press enter to continue...");
+			kb.nextLine();
 			
+		System.out.println("You wake up dazed and confused in the forest.");
+		//main game
+		while(!s.equals("exit")){
 			System.out.println("What would you like to do?");
-				s = kb.nextLine();
+				s = kb.nextLine().toLowerCase();
 			event(s);
 			if(w.getE()!=null){
 				System.out.print("Battle ensues!");
-				for(int i=1;i<p.getPack().getItems().size();i++){
-					System.out.println(i+"."+p.getPack().getItems().get(i).getName()+"\t Deals "+p.getPack().getItems().get(i).getDmg()+" damage.");
+				for(int i=0;i<p.getPack().getItems().size();i++){
+					System.out.println(i+1+"."+p.getPack().getItems().get(i).getName()+"\t Deals "+p.getPack().getItems().get(i).getDmg()+" damage.");
 				}
 				event(w.getE(),kb.nextInt()-1);
 				if(w.getE().getHp()<=0){
@@ -107,12 +121,15 @@ public class Game {
 			}
 			//takes first item in NPC inventory
 			if(w.getN()!=null){
-				System.out.println("You successfully added "+w.getN().getPack().getItems().get(0).getName()+" to your inventory");
-				p.addWeapon(w.getN().getPack().getItems().remove(0));
-				
+				if(w.getN().getPack().getItems().get(0).isObtainable()){
+					System.out.println("You successfully added "+w.getN().getPack().getItems().get(0).getName()+" to your inventory");
+					p.addWeapon(w.getN().getPack().getItems().remove(0));
+				}
 			}
 			if(w.getE()!=null){
-				p.addWeapon(w.getE().getPack().getItems().remove(0));
+				if(w.getE().getPack().getItems().get(0).isObtainable()){
+					p.addWeapon(w.getE().getPack().getItems().remove(0));
+				}
 			}
 		}
 		else if(s.equals("weapons")){
@@ -128,6 +145,18 @@ public class Game {
 			System.out.println("This looks like a good a place to rest...");
 			TimeUnit.SECONDS.sleep(3);
 			System.out.println("You wake up refreshed, and your HP is full again.");
+		}
+		else if(s.equals("help")){
+			System.out.println("The commands are: "
+					+ "\n1. North 	-- to go North"
+					+ "\n2. South 	-- to go South"
+					+ "\n3. East 	-- to go East"
+					+ "\n4. West 	-- to go West"
+					+ "\n5. Take 	-- Takes item from NPC or Enemy"
+					+ "\n6. Weapons -- Displays the weapons in your inventory"
+					+ "\n7. Sleep 	-- Let's your character heal"
+					+ "\n8. HP 	  	-- Displays hp of your character"
+					+ "\n9. HELP  	-- Displays this list again");
 		}
 	}
 	public static void event(Enemy e, int i){

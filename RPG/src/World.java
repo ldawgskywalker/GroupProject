@@ -19,8 +19,11 @@ public class World {
 		des=in.nextLine();
 		look1=in.nextLine();
 		look2=in.nextLine();
-		if(in.nextLine().equals("npc"))
+		if(in.nextLine().equals("npc")){
 			n = new NPC(in.nextLine());
+			n.addWeapon(new Weapon(in.nextLine(),in.nextInt()));
+			n.setSays(in.nextLine());
+		}
 		else if(in.nextLine().equals("enemy"))
 			e = new Enemy(in.nextInt());
 		in.close();
@@ -124,8 +127,11 @@ public class World {
 		des=in.nextLine();
 		look1=in.nextLine();
 		look2=in.nextLine();
-		if(in.nextLine().equals("npc"))
+		if(in.nextLine().equals("npc")){
 			n = new NPC(in.nextLine());
+			n.addWeapon(new Weapon(in.nextLine(),in.nextInt()));
+			n.setSays(in.nextLine());
+		}
 		else if(in.nextLine().equals("enemy"))
 			e = new Enemy(in.nextInt());
 		
@@ -143,8 +149,11 @@ public class World {
 		des=in.nextLine();
 		look1=in.nextLine();
 		look2=in.nextLine();
-		if(in.nextLine().equals("npc"))
+		if(in.nextLine().equals("npc")){
 			n = new NPC(in.nextLine());
+			n.addWeapon(new Weapon(in.nextLine(),in.nextInt()));
+			n.setSays(in.nextLine());
+		}
 		else if(in.nextLine().equals("enemy"))
 			e = new Enemy(in.nextInt());
 		
@@ -162,8 +171,11 @@ public class World {
 		des=in.nextLine();
 		look1=in.nextLine();
 		look2=in.nextLine();
-		if(in.nextLine().equals("npc"))
+		if(in.nextLine().equals("npc")){
 			n = new NPC(in.nextLine());
+			n.addWeapon(new Weapon(in.nextLine(),in.nextInt()));
+			n.setSays(in.nextLine());
+		}
 		else if(in.nextLine().equals("enemy"))
 			e = new Enemy(in.nextInt());
 		
