@@ -1,0 +1,9 @@
+null
+null
+null
+LakeTown
+The market place is bustling, full of people and vendors!
+You notice a weapons vendor trying to sell his overpriced crap.
+Getting something might not be a bad idea, incase that dragon shows up.
+$
+$

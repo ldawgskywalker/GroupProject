@@ -1,0 +1,10 @@
+fckdvillage
+Road
+Road2
+null
+You're walking through the outskirts and find a Bandit!
+The area is quiet and lifeless. No wonder, there are bandits here.
+And a dragon! Nope... it's just a twig.
+$
+enemy
+2

@@ -1,0 +1,9 @@
+null
+Pub
+Store
+Lake
+You enter Laketown, a town by a lake.
+This place is pretty sweet, they have pub and everything!
+Ah! A pub dragon! Oh... It's just a large man.
+$
+$

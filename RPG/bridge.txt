@@ -1,0 +1,10 @@
+Road
+Woods
+River
+null
+You aproach the bridge to find a troll!
+You look around and see the bridge. It appears to be made of wood.
+You gotta be kidding me... Another dragon... Never mind, its just my shadow.
+$
+enemy
+2

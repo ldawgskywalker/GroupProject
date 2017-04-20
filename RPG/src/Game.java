@@ -1,11 +1,12 @@
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.*;
+import java.util.concurrent.TimeUnit;
 public class Game {
 	private static Player p;
 	private static World w;
 	private static int count=0;
-	public static void main(String[]args) throws IOException{
+	public static void main(String[]args) throws IOException, InterruptedException{
 		Scanner kb=new Scanner(System.in);
 		
 		
@@ -40,16 +41,10 @@ public class Game {
 			
 		}
 		
-		
-		
-		
-		
-		
-		
 		//CLOSE
 		kb.close();
 	}
-	public static void event(String s) throws FileNotFoundException{
+	public static void event(String s) throws FileNotFoundException, InterruptedException{
 		if(s.equals("look around")){
 			if(count==0){
 				System.out.print(w.getLook1());
@@ -58,7 +53,7 @@ public class Game {
 			else 
 				System.out.print(w.getLook2());		
 			}
-		if(s.equals("south")){
+		else if(s.equals("south")){
 			if(w.getSouth().equals("null")){
 				System.out.println("Unfortunately, you cannot go South.");
 			}
@@ -68,7 +63,7 @@ public class Game {
 				
 			}
 		}
-		if(s.equals("north")){
+		else if(s.equals("north")){
 			if(w.getNorth().equals("null")){
 				System.out.println("Unfortunately, you cannot go North.");
 			}
@@ -78,7 +73,7 @@ public class Game {
 			}
 			
 		}
-		if(s.equals("east")){
+		else if(s.equals("east")){
 			if(w.getEast().equals("null")){
 				System.out.println("Unfortunately, you cannot go East.");
 			}
@@ -89,7 +84,7 @@ public class Game {
 			}
 			
 		}
-		if(s.equals("west")){
+		else if(s.equals("west")){
 			if(w.getWest().equals("null")){
 				System.out.println("Unfortunately, you cannot go West.");
 			}
@@ -99,14 +94,14 @@ public class Game {
 			}
 			
 		}
-		if(s.equals("talk")){
+		else if(s.equals("talk")){
 			if(w.getN()==null){
 				System.out.println("There is a time and place for everything... But not now.");
 			}
 			else
 				System.out.println(w.getN().getSays());
 		}
-		if(s.equals("take")){
+		else if(s.equals("take")){
 			if(w.getN()==null&&w.getE()==null){
 				System.out.println("There's nothing to take...");
 			}
@@ -120,10 +115,19 @@ public class Game {
 				p.addWeapon(w.getE().getPack().getItems().remove(0));
 			}
 		}
-		if(s.equals("weapons")){
+		else if(s.equals("weapons")){
 			for(int i=1;i<p.getPack().getItems().size();i++){
 				System.out.println(i+"."+p.getPack().getItems().get(i).getName()+"\t Deals "+p.getPack().getItems().get(i).getDmg()+" damage.");
 			}
+		}
+		else if(s.equals("hp")){
+			System.out.println("HP: "+p.getHp());
+		}
+		else if(s.equals("sleep")){
+			p.setHp(30);
+			System.out.println("This looks like a good a place to rest...");
+			TimeUnit.SECONDS.sleep(3);
+			System.out.println("You wake up refreshed, and your HP is full again.");
 		}
 	}
 	public static void event(Enemy e, int i){

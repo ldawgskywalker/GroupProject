@@ -1,0 +1,10 @@
+Bridge
+Cliff
+null
+Cave
+You awaken in the middle of the woods, dazed and confused. 
+You see trees... You're in the woods... There usually isn't much but trees.
+Oh my god... It's a dragon... Oh, wait... No... It's just trees.
+$
+$
+

@@ -1,0 +1,9 @@
+null
+Outskirts
+null
+null
+You arrive to find the town burnt to nothing.
+That dragon must have been here.
+Oh no, it's back! Ah, nope. Just more ashes.
+$
+$

@@ -1,0 +1,9 @@
+Road2
+null
+LakeTown
+Shack
+You drive where the river meets its end, the lake.
+The water seems deeper now. Probably because you're in a lake.
+Oh no, a dragon is here! Never mind... it's some seaweed.
+$
+$

@@ -1,0 +1,10 @@
+null
+null
+null
+Intersection
+You enter the crypt and are attacked by a Phantom!
+There is a draft of cold air, but where is it coming from?
+This place is too creepy for a dragon.
+$
+enemy
+Phantom

@@ -1,0 +1,12 @@
+null
+null
+Woods
+null
+You enter a dimly lit cave. In the center is an old man by a fire.
+You look around and see rocks. Its a cave, what did you expect?
+Oh my god... Another dragon... Nope, just another rock.
+npc
+Neil Young
+zeldaSword
+8
+It's dangerous to go alone, take this. (Type take to obtain sword).
